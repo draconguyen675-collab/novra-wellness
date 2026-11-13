@@ -1,0 +1,1250 @@
+/* ==========================================================================
+   NOVRA | ABOUT US • STEP 03
+   Creative editorial wellness design. Scoped to .na-about; respects homepage.
+   ========================================================================== */
+.na-about {
+  --na-ivory: #f6f4ed;
+  --na-white: #fffef9;
+  --na-ink: #213528;
+  --na-forest: #183127;
+  --na-deep: #12261d;
+  --na-sage: #81917b;
+  --na-muted: #71796b;
+  --na-line: #bfc5b7;
+  --na-gold: #d5ba8d;
+  background: var(--na-ivory);
+  color: var(--na-ink);
+  font-family: "DM Sans", Arial, sans-serif;
+}
+.na-about section {
+  position: relative;
+}
+.na-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.na-shell {
+  width: min(calc(100% - 112px), 1380px);
+  margin-inline: auto;
+}
+.na-spacing {
+  padding-block: clamp(100px, 10.2vw, 164px);
+}
+.na-title {
+  font:
+    400 clamp(66px, 7.6vw, 130px)/0.88 "Cormorant Garamond",
+    Georgia,
+    serif;
+  letter-spacing: -0.062em;
+}
+.na-title em {
+  font-weight: 400;
+  color: #7d8d79;
+}
+.na-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  font:
+    600 10px/1.6 "DM Sans",
+    sans-serif;
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+}
+.na-eyebrow__line {
+  display: inline-block;
+  height: 1px;
+  width: 32px;
+  background: currentColor;
+}
+.na-section-index {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding-bottom: 19px;
+  margin-bottom: clamp(60px, 7.5vw, 110px);
+  border-bottom: 1px solid var(--na-line);
+  color: #526b58;
+  font:
+    600 10px/1.5 "DM Sans",
+    sans-serif;
+  letter-spacing: 0.17em;
+}
+.na-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 44px;
+  border-bottom: 1px solid currentColor;
+  padding-block: 12px;
+  width: fit-content;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  font:
+    700 10px/1.4 "DM Sans",
+    sans-serif;
+  transition:
+    gap 0.25s,
+    color 0.25s;
+}
+.na-link:hover {
+  gap: 58px;
+  color: #6d886c;
+}
+.na-link--light {
+  color: #f6f4ed !important;
+}
+.na-gold {
+  color: var(--na-gold);
+}
+.na-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 55px;
+  margin-bottom: 65px;
+}
+.na-section-heading .na-eyebrow {
+  color: #637b68;
+  margin-bottom: 25px;
+}
+.na-section-heading > p {
+  max-width: 350px;
+  color: #667568;
+  font:
+    400 14px/1.95 "DM Sans",
+    sans-serif;
+}
+
+/* 01 — HERO */
+.na-hero {
+  min-height: min(850px, calc(100svh - 82px));
+  min-height: max(710px, calc(100svh - 82px));
+  overflow: hidden;
+  background: var(--na-deep);
+  color: #fbfaf5;
+}
+.na-hero__visual {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 68%;
+  overflow: hidden;
+  background: #465b4a;
+  clip-path: inset(0);
+}
+.na-hero__visual img {
+  width: 100%;
+  height: 110%;
+  object-fit: cover;
+  object-position: 50% 46%;
+}
+.na-hero__shade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, #15271fef 0%, #15271fd9 30%, #15271f95 61%, #15271f44 100%),
+    linear-gradient(0deg, #10241bc7 0%, transparent 38%);
+}
+.na-hero__content {
+  position: relative;
+  z-index: 2;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-block: clamp(90px, 10vw, 145px) 126px;
+}
+.na-hero__eyebrow {
+  color: #e4e9de;
+  margin-bottom: clamp(30px, 4.5vw, 65px);
+}
+.na-hero__title {
+  position: relative;
+  z-index: 1;
+  font:
+    400 clamp(100px, 12.4vw, 205px)/0.76 "Cormorant Garamond",
+    Georgia,
+    serif;
+  letter-spacing: -0.075em;
+  max-width: 1100px;
+}
+.na-hero__line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.14em;
+}
+.na-hero__line > span {
+  display: block;
+  width: fit-content;
+}
+.na-hero__title em {
+  font-weight: 400;
+  color: #d8e0d0;
+}
+.na-hero__lead {
+  max-width: 440px;
+  font:
+    400 14px/1.9 "DM Sans",
+    sans-serif;
+  color: #f4f2e9da;
+  margin-top: 28px !important;
+}
+.na-hero__links {
+  margin-top: 24px;
+}
+.na-hero__bottom {
+  position: absolute;
+  left: max(56px, calc((100% - 1380px) / 2));
+  right: max(56px, calc((100% - 1380px) / 2));
+  bottom: 35px;
+  z-index: 2;
+  border-top: 1px solid #ffffff70;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  color: #f2f1e8;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+}
+.na-hero__bottom a {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+.na-hero__side {
+  position: absolute;
+  right: 23px;
+  top: 45%;
+  color: #f4f2e8;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  writing-mode: vertical-rl;
+  z-index: 2;
+}
+
+/* 02 — LONG FORM STORY */
+.na-story {
+  padding-bottom: clamp(105px, 11vw, 180px);
+}
+.na-story__layout {
+  display: grid;
+  grid-template-columns: 0.38fr 1fr;
+  gap: clamp(50px, 8vw, 130px);
+}
+.na-story__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 55px;
+}
+.na-story__intro .na-eyebrow {
+  color: #5c715f;
+}
+.na-story__tiny {
+  color: #657165;
+  line-height: 2;
+  font-size: 13px;
+}
+.na-story__asterisk {
+  margin-top: auto;
+  font:
+    400 clamp(100px, 12vw, 210px)/0.7 "Cormorant Garamond",
+    serif;
+  color: #b3bfad;
+}
+.na-story__main .na-title {
+  font-size: clamp(66px, 7.3vw, 123px);
+}
+.na-story__body {
+  margin-top: clamp(40px, 5vw, 80px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 44px;
+  max-width: 775px;
+}
+.na-story__body > p {
+  font:
+    400 14px/2 "DM Sans",
+    sans-serif;
+  color: #697467;
+}
+.na-story__body .na-link {
+  grid-column: 1/-1;
+  margin-top: 4px;
+}
+.na-story__photo {
+  position: relative;
+  margin-top: clamp(78px, 10vw, 150px);
+  height: clamp(380px, 53vw, 800px);
+  overflow: hidden;
+  background: #a0a89c;
+}
+.na-story__photo > img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.na-story__photo-note {
+  position: absolute;
+  inset: auto 32px 32px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #fffd;
+  color: #fff;
+  text-shadow: 0 2px 12px #0009;
+  font:
+    700 10px/1.5 "DM Sans",
+    sans-serif;
+  letter-spacing: 0.16em;
+}
+
+/* 03 — MANIFESTO */
+.na-manifesto {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #182d22;
+  color: #fff;
+}
+.na-manifesto__photo,
+.na-manifesto__veil {
+  position: absolute;
+  inset: 0;
+}
+.na-manifesto__photo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.65);
+}
+.na-manifesto__veil {
+  background:
+    linear-gradient(90deg, #17281fdd, #17281f9d), linear-gradient(0deg, #15281fb8, transparent 35%);
+}
+.na-manifesto__inner {
+  position: relative;
+  width: min(calc(100% - 112px), 1380px);
+  min-height: min(800px, 100svh);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+  padding-block: 55px;
+}
+.na-manifesto__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #ffffff88;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+}
+.na-manifesto__phrases {
+  position: relative;
+  flex: 1;
+  display: grid;
+  place-items: center;
+}
+.na-manifesto__phrase {
+  max-width: 1150px;
+  width: 100%;
+  text-align: center;
+  font:
+    400 clamp(100px, 12vw, 200px)/0.82 "Cormorant Garamond",
+    serif;
+  letter-spacing: -0.07em;
+}
+.na-manifesto__phrase em {
+  color: #d5dbc7;
+}
+.na-manifesto__phrase:not(:first-child) {
+  display: none;
+}
+.na-manifesto__aside {
+  text-align: right;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.8;
+  letter-spacing: 0.17em;
+  color: #dae3d9;
+}
+
+/* 04 — PRINCIPLES */
+.na-principles {
+  background: #e9ede4;
+}
+.na-principles__grid {
+  display: grid;
+  grid-template-columns: 1fr 0.98fr;
+  gap: clamp(48px, 6vw, 105px);
+  align-items: start;
+}
+.na-principles__list {
+  border-top: 1px solid #aebbae;
+}
+.na-principle {
+  display: grid;
+  grid-template-columns: 50px 1fr 36px;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+  min-height: 125px;
+  padding: 27px 0;
+  background: transparent;
+  color: #60715f;
+  border: 0;
+  border-bottom: 1px solid #b7c2b4;
+  text-align: left;
+  transition: color 0.25s;
+}
+.na-principle > span:nth-child(2) {
+  font:
+    400 clamp(32px, 3.6vw, 58px)/1.06 "Cormorant Garamond",
+    serif;
+  letter-spacing: -0.04em;
+}
+.na-principle:hover,
+.na-principle.is-active {
+  color: #1e3a2c;
+}
+.na-principle.is-active > span:nth-child(2) {
+  font-style: italic;
+}
+.na-principle__number {
+  align-self: start;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding-top: 8px;
+}
+.na-principle__icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+}
+.na-principle.is-active .na-principle__icon {
+  background: #253f30;
+  color: #fff;
+  border-color: #253f30;
+  transform: rotate(45deg);
+}
+.na-principles__hint {
+  margin-top: 28px !important;
+  color: #728575;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+.na-principles__preview {
+  display: grid;
+  grid-template-rows: minmax(250px, 440px) 1fr;
+  animation: na-preview 0.42s ease both;
+}
+@keyframes na-preview {
+  from {
+    opacity: 0.6;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.na-principles__image {
+  height: 100%;
+  background: #b2bfb0;
+  overflow: hidden;
+}
+.na-principles__image img {
+  height: 100%;
+  object-fit: cover;
+}
+.na-principles__caption {
+  padding: clamp(28px, 3vw, 45px);
+  background: #f7f7f1;
+}
+.na-principles__caption > span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #6e816e;
+}
+.na-principles__caption > strong {
+  display: block;
+  margin-top: 12px;
+  font:
+    400 clamp(30px, 3.2vw, 49px)/1.05 "Cormorant Garamond",
+    serif;
+}
+.na-principles__caption > p {
+  margin-top: 17px !important;
+  max-width: 470px;
+  font-size: 13px;
+  line-height: 1.85;
+  color: #677464;
+}
+
+/* 05 — ASYMMETRIC GALLERY */
+.na-gallery {
+  background: #f8f7f1;
+}
+.na-gallery__grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.68fr 0.89fr;
+  column-gap: clamp(15px, 2.2vw, 35px);
+  row-gap: clamp(55px, 5vw, 100px);
+  align-items: start;
+}
+.na-gallery__item {
+  min-width: 0;
+}
+.na-gallery__item--1 {
+  grid-column: 1 / 3;
+}
+.na-gallery__item--2 {
+  grid-column: 3;
+  margin-top: 145px;
+}
+.na-gallery__item--3 {
+  grid-column: 1;
+  margin-top: -30px;
+}
+.na-gallery__item--4 {
+  grid-column: 2 / 4;
+  margin-top: 115px;
+}
+.na-gallery__open {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  background: #d9dcd2;
+  cursor: zoom-in;
+}
+.na-gallery__open img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.4s;
+}
+.na-gallery__item--1 .na-gallery__open {
+  aspect-ratio: 1.17;
+}
+.na-gallery__item--2 .na-gallery__open {
+  aspect-ratio: 0.67;
+}
+.na-gallery__item--3 .na-gallery__open {
+  aspect-ratio: 0.8;
+}
+.na-gallery__item--4 .na-gallery__open {
+  aspect-ratio: 1.35;
+}
+.na-gallery__open:hover img {
+  filter: saturate(1.1);
+}
+.na-gallery__open-icon {
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #f6f4ed;
+  color: #23372b;
+  transition:
+    transform 0.3s,
+    background 0.3s;
+}
+.na-gallery__open:hover .na-gallery__open-icon {
+  transform: rotate(45deg);
+  background: #d7dfd1;
+}
+.na-gallery__item figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 18px;
+  align-items: baseline;
+}
+.na-gallery__item figcaption span {
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  color: #6f8372;
+}
+.na-gallery__item figcaption strong {
+  font:
+    400 clamp(21px, 2.2vw, 32px) "Cormorant Garamond",
+    serif;
+}
+
+/* 06 — JOURNEY */
+.na-journey {
+  background: #e7eadf;
+}
+.na-journey__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  background: #b8c3b2;
+  border: 1px solid #b8c3b2;
+}
+.na-journey__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+  padding: clamp(24px, 3vw, 44px);
+  background: #e7eadf;
+  transition: background 0.3s;
+}
+.na-journey__card:hover {
+  background: #f5f6ee;
+}
+.na-journey__card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+.na-journey__card-top span:last-child {
+  color: #a7b5a4;
+  font-size: 31px;
+}
+.na-journey__label {
+  margin-top: auto;
+  margin-bottom: 20px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.21em;
+  color: #657966;
+}
+.na-journey__card h3 {
+  font:
+    400 clamp(30px, 2.7vw, 46px)/1.05 "Cormorant Garamond",
+    serif;
+}
+.na-journey__card > p {
+  margin-top: 20px !important;
+  font-size: 12px;
+  line-height: 1.9;
+  color: #617164;
+}
+.na-journey__arrow {
+  flex: 0 0 auto;
+  margin-top: 30px;
+  color: #667b68;
+}
+
+/* 07 — THE HUMAN TOUCH */
+.na-human {
+  background: #f8f7f1;
+}
+.na-human__layout {
+  display: grid;
+  grid-template-columns: 0.98fr 1.02fr;
+  gap: clamp(45px, 9vw, 150px);
+  align-items: center;
+}
+.na-human__visual {
+  position: relative;
+  height: clamp(530px, 55vw, 780px);
+  background: #849983;
+  overflow: hidden;
+}
+.na-human__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.na-human__photo-mark {
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  border-top: 1px solid #ffffffb8;
+  padding-top: 20px;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-shadow: 0 2px 12px #0008;
+}
+.na-human__photo-mark span {
+  font-size: 24px;
+}
+.na-human__content .na-eyebrow {
+  color: #667e6b;
+  margin-bottom: 35px;
+}
+.na-human__content > p {
+  margin-top: 35px !important;
+  max-width: 470px;
+  color: #627062;
+  font-size: 14px;
+  line-height: 2;
+}
+.na-human__qualities {
+  margin-top: 40px;
+  border-top: 1px solid #bdc7b9;
+}
+.na-human__qualities span {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid #bdc7b9;
+  font-size: 12px;
+}
+.na-human__qualities svg {
+  color: #6b8b6d;
+}
+.na-human__content .na-human__note {
+  padding-left: 15px;
+  border-left: 2px solid #b8c4b3;
+  margin-top: 30px !important;
+  max-width: 440px;
+  font-size: 11px;
+  color: #748072;
+}
+.na-human__content .na-link {
+  margin-top: 36px;
+}
+
+/* 08 — CLOSING CTA */
+.na-closing {
+  min-height: min(830px, 100svh);
+  min-height: max(640px, 88svh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #193025;
+  color: #fff;
+  overflow: hidden;
+}
+.na-closing__bg,
+.na-closing__shade {
+  position: absolute;
+  inset: 0;
+}
+.na-closing__bg img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: saturate(0.78);
+}
+.na-closing__shade {
+  background:
+    linear-gradient(90deg, #172c22de, #172c2297), linear-gradient(0deg, #15271eb0, transparent 38%);
+}
+.na-closing__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 115px;
+}
+.na-closing__content .na-eyebrow {
+  color: #e7e4d7;
+}
+.na-closing__content h2 {
+  margin: 35px 0 27px;
+  font:
+    400 clamp(108px, 13.5vw, 205px)/0.77 "Cormorant Garamond",
+    serif;
+  letter-spacing: -0.072em;
+}
+.na-closing__content h2 em {
+  color: #e4e9d9;
+}
+.na-closing__content p {
+  max-width: 420px;
+  font-size: 14px;
+  line-height: 1.9;
+  color: #f6f6efda;
+}
+.na-closing__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  margin-top: 35px;
+  min-height: 58px;
+  background: #f8f7f1;
+  color: #233528 !important;
+  padding: 19px 25px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 10px;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.na-closing__cta:hover {
+  background: #e0e7d8;
+  transform: translateY(-3px);
+}
+.na-closing__caption {
+  position: absolute;
+  z-index: 1;
+  bottom: 30px;
+  left: 56px;
+  right: 56px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #ffffff88;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+}
+
+/* Gallery lightbox, portal-rendered outside page wrapper */
+.na-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: grid;
+  place-items: center;
+  background: rgba(10, 24, 16, 0.95);
+  color: #faf9f1;
+  padding: 24px;
+  font-family: "DM Sans", sans-serif;
+}
+.na-lightbox__dialog {
+  width: min(100%, 1100px);
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100svh - 48px);
+}
+.na-lightbox__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding-bottom: 13px;
+  font:
+    600 10px/1.6 "DM Sans",
+    sans-serif;
+  letter-spacing: 0.2em;
+}
+.na-lightbox button {
+  appearance: none;
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  flex: 0 0 43px;
+  background: transparent;
+  border: 1px solid #e8e9dd87;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.na-lightbox button:hover {
+  background: #455a48;
+}
+.na-lightbox button:focus-visible {
+  outline: 3px solid #e0c68e;
+  outline-offset: 3px;
+}
+.na-lightbox__dialog > img {
+  display: block;
+  width: 100%;
+  min-height: 0;
+  max-height: min(66svh, 760px);
+  object-fit: contain;
+  background: #273a2e;
+}
+.na-lightbox__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 35px;
+  padding-top: 18px;
+}
+.na-lightbox__bottom span {
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  color: #c4ceb9;
+}
+.na-lightbox__bottom h2 {
+  margin-top: 8px;
+  font:
+    400 43px/0.98 "Cormorant Garamond",
+    serif;
+}
+.na-lightbox__controls {
+  display: flex;
+  gap: 12px;
+}
+
+/* Progressive enhancements / reduced motion */
+@media (min-width: 1024px) {
+  :root[data-motion="full"] .na-manifesto__phrase {
+    position: absolute;
+    inset: auto 0;
+  }
+  :root[data-motion="full"] .na-manifesto__phrase:not(:first-child) {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@media (max-width: 1200px) {
+  .na-shell {
+    width: min(calc(100% - 76px), 1380px);
+  }
+  .na-hero__bottom {
+    left: 38px;
+    right: 38px;
+  }
+  .na-title {
+    font-size: clamp(65px, 7vw, 104px);
+  }
+  .na-journey__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .na-journey__card {
+    min-height: 370px;
+  }
+}
+@media (max-width: 1023px) {
+  .na-hero__title {
+    font-size: clamp(92px, 12.5vw, 145px);
+  }
+  .na-manifesto {
+    min-height: auto;
+  }
+  .na-manifesto__inner {
+    min-height: 690px;
+  }
+  .na-manifesto__phrases {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    align-items: center;
+    justify-content: center;
+    padding-block: 85px;
+  }
+  .na-manifesto__phrase {
+    font-size: clamp(68px, 11vw, 120px);
+  }
+  .na-manifesto__phrase:not(:first-child) {
+    display: block;
+  }
+  .na-story__layout {
+    grid-template-columns: 0.34fr 1fr;
+    gap: 40px;
+  }
+  .na-principles__grid {
+    grid-template-columns: 1fr;
+  }
+  .na-principles__preview {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .na-principles__image {
+    min-height: 350px;
+  }
+  .na-gallery__item--2 {
+    margin-top: 65px;
+  }
+  .na-gallery__item--4 {
+    margin-top: 55px;
+  }
+  .na-human__layout {
+    gap: 48px;
+  }
+}
+@media (max-width: 700px) {
+  .na-shell {
+    width: calc(100% - 36px);
+  }
+  .na-spacing {
+    padding-block: 92px;
+  }
+  .na-section-index {
+    margin-bottom: 55px;
+    font-size: 8px;
+    letter-spacing: 0.12em;
+  }
+  .na-section-index span:last-child {
+    text-align: right;
+  }
+  .na-title {
+    font-size: clamp(55px, 12vw, 82px);
+  }
+  .na-eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+  }
+  .na-section-heading {
+    display: block;
+    margin-bottom: 40px;
+  }
+  .na-section-heading > p {
+    margin-top: 25px !important;
+    max-width: 540px;
+  }
+  .na-hero {
+    min-height: max(680px, calc(100svh - 70px));
+  }
+  .na-hero__content {
+    min-height: inherit;
+    padding-block: 100px 122px;
+  }
+  .na-hero__visual {
+    width: 100%;
+  }
+  .na-hero__shade {
+    background:
+      linear-gradient(90deg, #15271fdc, #15271f78),
+      linear-gradient(0deg, #10241bdc, transparent 70%);
+  }
+  .na-hero__eyebrow {
+    margin-bottom: 40px;
+  }
+  .na-hero__title {
+    font-size: clamp(76px, 15vw, 120px);
+  }
+  .na-hero__lead {
+    max-width: 340px;
+    font-size: 13px;
+    line-height: 1.9;
+  }
+  .na-hero__bottom {
+    left: 18px;
+    right: 18px;
+    bottom: 22px;
+    font-size: 8px;
+  }
+  .na-hero__bottom > span:last-child {
+    display: none;
+  }
+  .na-hero__side {
+    display: none;
+  }
+  .na-story__layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .na-story__intro {
+    gap: 20px;
+  }
+  .na-story__asterisk {
+    display: none;
+  }
+  .na-story__main .na-title {
+    font-size: clamp(58px, 12vw, 90px);
+  }
+  .na-story__body {
+    margin-top: 32px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .na-story__photo {
+    height: 450px;
+    margin-top: 60px;
+  }
+  .na-story__photo-note {
+    inset: auto 15px 20px;
+    font-size: 8px;
+  }
+  .na-manifesto__inner {
+    min-height: 650px;
+    padding-block: 32px;
+  }
+  .na-manifesto__meta {
+    font-size: 8px;
+  }
+  .na-manifesto__phrases {
+    gap: 45px;
+    padding-block: 70px;
+  }
+  .na-manifesto__phrase {
+    font-size: clamp(59px, 13vw, 90px);
+  }
+  .na-principle {
+    grid-template-columns: 30px 1fr 35px;
+    min-height: 105px;
+    gap: 10px;
+  }
+  .na-principle > span:nth-child(2) {
+    font-size: clamp(31px, 8vw, 47px);
+  }
+  .na-principles__preview {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .na-principles__image {
+    min-height: 350px;
+    max-height: 430px;
+  }
+  .na-gallery__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 14px;
+  }
+  .na-gallery__item--1,
+  .na-gallery__item--4 {
+    grid-column: 1/-1;
+    margin: 0;
+  }
+  .na-gallery__item--2,
+  .na-gallery__item--3 {
+    grid-column: auto;
+    margin: 0;
+  }
+  .na-gallery__item--1 .na-gallery__open,
+  .na-gallery__item--4 .na-gallery__open {
+    aspect-ratio: 1.2;
+  }
+  .na-gallery__item--2 .na-gallery__open,
+  .na-gallery__item--3 .na-gallery__open {
+    aspect-ratio: 0.68;
+  }
+  .na-gallery__item figcaption {
+    display: block;
+  }
+  .na-gallery__item figcaption span {
+    display: block;
+  }
+  .na-gallery__item figcaption strong {
+    display: block;
+    margin-top: 6px;
+    font-size: 23px;
+  }
+  .na-journey__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .na-journey__card {
+    padding: 25px 18px;
+    min-height: 350px;
+  }
+  .na-journey__card h3 {
+    font-size: 32px;
+  }
+  .na-journey__card > p {
+    font-size: 11px;
+  }
+  .na-human__layout {
+    grid-template-columns: 1fr;
+  }
+  .na-human__visual {
+    height: 470px;
+  }
+  .na-human__content {
+    padding-top: 12px;
+  }
+  .na-closing {
+    min-height: 680px;
+  }
+  .na-closing__content h2 {
+    font-size: clamp(86px, 16vw, 125px);
+  }
+  .na-closing__caption {
+    left: 18px;
+    right: 18px;
+    font-size: 8px;
+  }
+  .na-lightbox {
+    padding: 15px;
+  }
+  .na-lightbox__dialog {
+    max-height: calc(100svh - 30px);
+  }
+  .na-lightbox__dialog > img {
+    max-height: 60svh;
+  }
+  .na-lightbox__bottom h2 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 390px) {
+  .na-hero__title {
+    font-size: clamp(66px, 16vw, 80px);
+  }
+  .na-manifesto__phrase {
+    font-size: 54px;
+  }
+  .na-journey__grid {
+    grid-template-columns: 1fr;
+  }
+  .na-journey__card {
+    min-height: 300px;
+  }
+  .na-journey__card > p {
+    max-width: 280px;
+  }
+  .na-gallery__grid {
+    grid-template-columns: 1fr;
+  }
+  .na-gallery__item--1,
+  .na-gallery__item--2,
+  .na-gallery__item--3,
+  .na-gallery__item--4 {
+    grid-column: 1;
+  }
+  .na-gallery__item .na-gallery__open {
+    aspect-ratio: 1.15;
+  }
+}
+:root[data-motion="reduced"] .na-about *,
+:root[data-motion="reduced"] .na-about *::before,
+:root[data-motion="reduced"] .na-about *::after,
+:root[data-motion="reduced"] .na-lightbox *,
+:root[data-motion="reduced"] .na-lightbox *::before,
+:root[data-motion="reduced"] .na-lightbox *::after {
+  animation-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+  transition-duration: 0.01ms !important;
+}
+:root[data-motion="reduced"] .na-manifesto__phrase:not(:first-child) {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+:root[data-motion="reduced"] .na-manifesto__phrases {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-block: 70px;
+}
+:root[data-motion="reduced"] .na-manifesto__phrase {
+  position: static;
+  font-size: clamp(58px, 8vw, 112px);
+}

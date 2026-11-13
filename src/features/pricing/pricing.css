@@ -1,0 +1,1227 @@
+/* NOVRA Step 07 — high-contrast editorial pricing / all styles scoped to .nprice-site */
+.nprice-site {
+  --pr-deep: #20392c;
+  --pr-dark: #172f24;
+  --pr-ink: #27352b;
+  --pr-sage: #82927c;
+  --pr-gold: #c8aa7b;
+  --pr-cream: #f6f4ed;
+  --pr-paper: #ecebe2;
+  --pr-line: #c5c9bd;
+  min-width: 320px;
+  background: var(--pr-cream);
+  color: var(--pr-ink);
+  font-family: "DM Sans", Arial, sans-serif;
+}
+.nprice-site * {
+  box-sizing: border-box;
+}
+.nprice-site h1,
+.nprice-site h2,
+.nprice-site h3,
+.nprice-site h4,
+.nprice-site p,
+.nprice-site figure {
+  margin: 0;
+}
+.nprice-site img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.nprice-site a {
+  color: inherit;
+  text-decoration: none;
+}
+.nprice-site button {
+  font: inherit;
+  cursor: pointer;
+}
+.nprice-site button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+.nprice-site :focus-visible {
+  outline: 3px solid #ac8450;
+  outline-offset: 4px;
+}
+.nprice-width {
+  width: min(100% - 104px, 1340px);
+  margin-inline: auto;
+}
+.nprice-mini,
+.nprice-section-index {
+  font-size: 10px;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.nprice-mini {
+  color: #697967;
+}
+.nprice-section-index {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 19px 0;
+  border-top: 1px solid var(--pr-line);
+  line-height: 1.5;
+}
+.nprice-site h2 {
+  font:
+    400 clamp(58px, 7.2vw, 118px)/0.86 "Cormorant Garamond",
+    Georgia,
+    serif;
+  letter-spacing: -0.064em;
+}
+.nprice-site h2 em,
+.nprice-site h1 em {
+  font-weight: 400;
+  color: #718571;
+}
+.nprice-underlink {
+  display: inline-flex;
+  gap: 40px;
+  align-items: center;
+  white-space: nowrap;
+  padding-bottom: 13px;
+  border-bottom: 1px solid currentColor;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  font-size: 11px;
+}
+.nprice-underlink svg {
+  transition: transform 0.3s;
+}
+.nprice-underlink:hover svg {
+  transform: translate(4px, -4px);
+}
+/* Cinematic cover */
+.nprice-hero {
+  display: grid;
+  grid-template-columns: 53% 47%;
+  min-height: 760px;
+  min-height: max(780px, 98svh);
+  background: #e9e9df;
+  overflow: hidden;
+}
+.nprice-hero__content {
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+  padding: 144px 5vw 38px max(52px, calc((100vw - 1340px) / 2));
+  display: flex;
+  flex-direction: column;
+}
+.nprice-hero__kicker {
+  font-size: 10px;
+  letter-spacing: 0.21em;
+  font-weight: 700;
+  color: #5a6f5c;
+}
+.nprice-hero__headline {
+  font:
+    400 clamp(90px, 10.2vw, 180px)/0.76 "Cormorant Garamond",
+    Georgia,
+    serif !important;
+  letter-spacing: -0.077em !important;
+  margin: auto 0 64px !important;
+  white-space: nowrap;
+}
+.nprice-hero__headline em {
+  color: #778c76;
+}
+.nprice-hero__line {
+  display: block;
+  overflow: hidden;
+  line-height: 0.9;
+  padding-bottom: 0.12em;
+}
+.nprice-hero__line > span {
+  display: block;
+  transform-origin: left bottom;
+}
+.nprice-hero__bottom {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 22px;
+  padding-bottom: 45px;
+  border-bottom: 1px solid #bac2b6;
+}
+.nprice-hero__description {
+  font-size: 13px;
+  line-height: 1.95;
+  max-width: 320px;
+  color: #58685b;
+}
+.nprice-hero__link {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border-bottom: 1px solid #637364;
+  padding-bottom: 9px;
+}
+.nprice-hero__link svg {
+  animation: nprice-down 1.7s ease-in-out infinite;
+}
+.nprice-hero__edition {
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.17em;
+  margin-top: 20px;
+  color: #6f776a;
+}
+.nprice-hero__visual {
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  min-height: 570px;
+  background: #7a8e7c;
+}
+.nprice-hero__photo {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  will-change: clip-path;
+}
+.nprice-hero__photo:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, #09291e66, transparent 44%);
+}
+.nprice-hero__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 53% center;
+}
+.nprice-hero__image-label {
+  position: absolute;
+  bottom: 38px;
+  left: 35px;
+  font-size: 9px;
+  color: #f7f7ee;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+.nprice-hero__seal {
+  position: absolute;
+  top: 45%;
+  left: 22px;
+  width: 121px;
+  height: 121px;
+  border-radius: 50%;
+  border: 1px solid #e8dbc5;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #f7f5ed;
+  background: var(--pr-deep);
+  box-shadow: 0 15px 50px #1b31243b;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.nprice-hero__seal svg {
+  color: #d0b58a;
+}
+@keyframes nprice-down {
+  0%,
+  100% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+/* Intro */
+.nprice-intro {
+  padding: 125px 0 157px;
+}
+.nprice-intro__grid {
+  display: grid;
+  grid-template-columns: 29% 1fr;
+  gap: 8%;
+  margin-top: 86px;
+}
+.nprice-intro__grid h2 {
+  max-width: 1010px;
+  font-size: clamp(56px, 6.8vw, 109px);
+}
+.nprice-intro__grid p:last-child {
+  font-size: 14px;
+  line-height: 2;
+  color: #637063;
+  max-width: 440px;
+  margin-top: 34px;
+}
+.nprice-intro__grid .nprice-mini {
+  padding-top: 11px;
+}
+/* Price Atelier */
+.nprice-explorer {
+  padding: 35px 0 136px;
+  background: #e9eadf;
+}
+.nprice-explorer__heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 35px;
+  margin: 82px 0 58px;
+}
+.nprice-explorer__heading h2 {
+  margin-top: 25px;
+}
+.nprice-explorer__heading > p {
+  font-size: 13px;
+  line-height: 2;
+  max-width: 300px;
+  color: #657265;
+  margin-bottom: 9px;
+}
+.nprice-tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 0 0 30px;
+}
+.nprice-tabs button {
+  border: 1px solid #b9c1b5;
+  background: transparent;
+  color: #465748;
+  padding: 14px 20px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.nprice-tabs button:hover,
+.nprice-tabs button.is-active {
+  background: #264232;
+  color: #fff;
+  border-color: #264232;
+}
+.nprice-explorer__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(330px, 0.48fr);
+  align-items: start;
+  gap: 34px;
+}
+.nprice-treatment-list {
+  background: #f6f4ee;
+  border-top: 1px solid #cbd1c6;
+}
+.nprice-row {
+  border-bottom: 1px solid #cbd1c6;
+  background: #f6f4ee;
+  transition: background 0.25s;
+}
+.nprice-row.is-selected {
+  background: #f0f2e9;
+}
+.nprice-row__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 20px 17px 17px;
+}
+.nprice-row__title {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  align-items: center;
+  gap: 21px;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  color: inherit;
+}
+.nprice-row__thumb {
+  width: 77px;
+  height: 78px;
+  flex: none;
+  overflow: hidden;
+  background: #899986;
+}
+.nprice-row__thumb img {
+  transition: transform 0.65s ease;
+}
+.nprice-row:hover .nprice-row__thumb img {
+  transform: scale(1.09);
+}
+.nprice-row__title > span:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+.nprice-row__title small {
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  font-size: 9px;
+  color: #798675;
+}
+.nprice-row__title strong {
+  font:
+    400 clamp(21px, 2.5vw, 32px)/1 "Cormorant Garamond",
+    Georgia,
+    serif;
+  letter-spacing: -0.025em;
+}
+.nprice-row__chevron {
+  display: none;
+  flex: none;
+}
+.nprice-row__value {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  text-align: right;
+  white-space: nowrap;
+}
+.nprice-row__value small {
+  font-size: 9px;
+  font-weight: 700;
+  color: #849084;
+  letter-spacing: 0.1em;
+}
+.nprice-row__value b {
+  font:
+    400 34px/1 "Cormorant Garamond",
+    Georgia,
+    serif;
+}
+.nprice-row__expand {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  margin-left: 12px;
+  flex: none;
+  border: 1px solid #bdc8ba;
+  border-radius: 50%;
+  background: transparent;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+.nprice-row__expand:hover {
+  transform: rotate(90deg);
+  background: #dde3d9;
+}
+.nprice-row__body {
+  padding: 4px 26px 26px 115px;
+}
+.nprice-row__body > p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #62715f;
+  max-width: 560px;
+  margin-bottom: 21px;
+}
+.nprice-row__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+.nprice-row__options button {
+  border: 1px solid #b9c6b5;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  padding: 11px 12px;
+  background: transparent;
+  font-size: 11px;
+  color: #324f3c;
+}
+.nprice-row__options button span {
+  font-weight: 700;
+}
+.nprice-row__options button.is-active {
+  background: #234a32;
+  color: white;
+  border-color: #234a32;
+}
+.nprice-row__body-bottom {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 23px;
+  flex-wrap: wrap;
+}
+.nprice-row__body-bottom > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 7px;
+  text-transform: uppercase;
+}
+.nprice-sel-confirm {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #365f46;
+}
+/* sticky receipt */
+.nprice-summary {
+  position: sticky;
+  top: 100px;
+  background: #1e382b;
+  color: #fff;
+  padding: 33px 32px 27px;
+  min-height: 580px;
+  display: flex;
+  flex-direction: column;
+}
+.nprice-summary__heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  color: #d6d7c5;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+}
+.nprice-summary__heading span:last-child {
+  font-size: 32px;
+  line-height: 0.5;
+  color: #ccb38d;
+}
+.nprice-summary h3 {
+  margin: 34px 0 14px;
+  font:
+    400 clamp(45px, 4.6vw, 64px)/0.95 "Cormorant Garamond",
+    Georgia,
+    serif;
+  letter-spacing: -0.05em;
+}
+.nprice-summary h3 em {
+  color: #c7b48d;
+  font-weight: 400;
+}
+.nprice-summary > p {
+  max-width: 260px;
+  font-size: 12px;
+  line-height: 1.9;
+  color: #c0cfbc;
+}
+.nprice-summary__selection {
+  padding: 20px 0 8px;
+  margin: 24px 0 0;
+  list-style: none;
+  border-top: 1px solid #72877570;
+}
+.nprice-summary__selection li {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  border-bottom: 1px solid #72877555;
+  padding: 9px 0;
+}
+.nprice-summary__selection li > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.nprice-summary__selection strong {
+  font-size: 12px;
+  font-weight: 500;
+}
+.nprice-summary__selection span {
+  font-size: 10px;
+  color: #c6d5be;
+}
+.nprice-summary__selection button {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  background: transparent;
+  border: 1px solid #8da38a;
+  color: #fff;
+}
+.nprice-summary__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 7px;
+  padding: 30px 0 20px;
+  min-height: 138px;
+  color: #d4dacb;
+  font-size: 12px;
+}
+.nprice-summary__empty small {
+  color: #9eaf9d;
+  font-size: 10px;
+}
+.nprice-summary__flower {
+  font-size: 31px;
+  color: #bda17e;
+}
+.nprice-summary__total {
+  margin-top: auto;
+  padding-top: 23px;
+  border-top: 1px solid #6d866b70;
+}
+.nprice-summary__total > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+}
+.nprice-summary__total span {
+  font-size: 10px;
+  letter-spacing: 0.11em;
+  color: #d3decc;
+  font-weight: 700;
+}
+.nprice-summary__total strong {
+  font-size: 14px;
+}
+.nprice-summary__total .nprice-summary__price {
+  border-top: 1px solid #6d866b70;
+  margin-top: 10px;
+  padding: 20px 0;
+}
+.nprice-summary__price strong {
+  font:
+    400 46px/1 "Cormorant Garamond",
+    Georgia,
+    serif;
+  color: #e4c79c;
+}
+.nprice-summary__cta {
+  width: 100%;
+  border: 0;
+  background: #ede9dc;
+  color: #20392b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 19px 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.nprice-summary__cta:not(:disabled):hover {
+  background: #d7b88c;
+  transform: translateY(-2px);
+}
+.nprice-summary__reset {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 0;
+  color: #dae3d4;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  margin: 13px 0 0;
+  padding: 7px 0;
+}
+.nprice-summary__disclaimer {
+  font-size: 10px;
+  line-height: 1.7;
+  color: #adbcac;
+  margin-top: 20px;
+}
+/* cinematic full bleed */
+.nprice-quote {
+  height: clamp(620px, 85svh, 900px);
+  position: relative;
+  overflow: hidden;
+  background: #324a3a;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.nprice-quote__photo,
+.nprice-quote__shade {
+  position: absolute;
+  inset: -8% 0;
+}
+.nprice-quote__photo img {
+  height: 100%;
+  filter: saturate(0.72);
+}
+.nprice-quote__shade {
+  inset: 0;
+  background:
+    linear-gradient(90deg, #192f29aa, #223b3688), linear-gradient(0deg, #14241966, transparent 35%);
+}
+.nprice-quote__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(900px, calc(100% - 32px));
+}
+.nprice-quote__content > span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.23em;
+}
+.nprice-quote h2 {
+  margin: 32px 0 !important;
+  color: #fff;
+  font:
+    400 clamp(80px, 10.5vw, 170px)/0.83 "Cormorant Garamond",
+    Georgia,
+    serif;
+  letter-spacing: -0.06em;
+}
+.nprice-quote h2 em {
+  color: #e5d2ac;
+}
+.nprice-quote p {
+  max-width: 440px;
+  font-size: 13px;
+  line-height: 1.85;
+  color: #f1f2e9;
+}
+.nprice-quote__number {
+  position: absolute;
+  bottom: 34px;
+  right: 48px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  z-index: 2;
+}
+/* packages */
+.nprice-packages {
+  padding: 110px 0 145px;
+}
+.nprice-packages__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 35px;
+  margin: 65px 0 55px;
+}
+.nprice-packages__top h2 {
+  margin-top: 22px;
+}
+.nprice-packages__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+.nprice-package {
+  display: block;
+  min-width: 0;
+}
+.nprice-package__photo {
+  height: clamp(310px, 31vw, 470px);
+  background: #929d91;
+  overflow: hidden;
+}
+.nprice-package__photo img {
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.nprice-package:hover img {
+  transform: scale(1.07) !important;
+}
+.nprice-package__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 19px 0 12px;
+}
+.nprice-package__bar span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #69806b;
+}
+.nprice-package h3 {
+  font:
+    400 clamp(30px, 3.3vw, 48px)/1 "Cormorant Garamond",
+    Georgia,
+    serif;
+  letter-spacing: -0.035em;
+}
+.nprice-package p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #6f7b6d;
+  margin: 12px 0 21px;
+}
+.nprice-package__facts {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 17px;
+  border-top: 1px solid #b9c1b3;
+}
+.nprice-package__facts > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+}
+.nprice-package__facts strong {
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+.nprice-package > small {
+  display: block;
+  margin-top: 10px;
+  font-size: 9px;
+  color: #8b998a;
+  letter-spacing: 0.05em;
+}
+/* FAQs */
+.nprice-faq {
+  background: #e9e9e0;
+  padding: 35px 0 132px;
+}
+.nprice-faq__layout {
+  display: grid;
+  grid-template-columns: 0.78fr 1.22fr;
+  gap: 10%;
+  padding-top: 67px;
+}
+.nprice-faq__layout h2 {
+  font-size: clamp(55px, 5.3vw, 88px);
+  margin-top: 23px;
+}
+.nprice-faq__layout > div:first-child > p {
+  font-size: 13px;
+  line-height: 1.9;
+  max-width: 320px;
+  margin-top: 26px;
+  color: #6a7568;
+}
+.nprice-faq__items {
+  border-top: 1px solid #b4bfaf;
+}
+.nprice-faq__items details {
+  border-bottom: 1px solid #b4bfaf;
+}
+.nprice-faq__items summary {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  cursor: pointer;
+  padding: 24px 0;
+  list-style: none;
+}
+.nprice-faq__items summary::-webkit-details-marker {
+  display: none;
+}
+.nprice-faq__items summary span {
+  font-size: 10px;
+  font-weight: 700;
+  color: #71806f;
+}
+.nprice-faq__items summary strong {
+  font-weight: 500;
+  flex: 1;
+  font-size: 15px;
+}
+.nprice-faq__items details[open] summary svg {
+  transform: rotate(45deg);
+}
+.nprice-faq__items summary svg {
+  flex: none;
+  transition: transform 0.25s;
+}
+.nprice-faq__items details > p {
+  padding: 0 30px 28px 34px;
+  font-size: 13px;
+  line-height: 1.9;
+  color: #60705e;
+  max-width: 670px;
+}
+/* Closing CTA */
+.nprice-end {
+  background: #20392c;
+  color: #f6f4ed;
+  padding: 110px 0 95px;
+  overflow: hidden;
+}
+.nprice-end > .nprice-width {
+  position: relative;
+}
+.nprice-end > .nprice-width > span:first-child {
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  font-weight: 700;
+  color: #dac2a1;
+}
+.nprice-end h2 {
+  font-size: clamp(72px, 10vw, 160px);
+  margin: 38px 0 46px;
+}
+.nprice-end h2 em {
+  color: #d9bc92;
+}
+.nprice-end .nprice-width > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  border-top: 1px solid #6f8572;
+  padding-top: 27px;
+}
+.nprice-end p {
+  max-width: 380px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #c6d3c4;
+}
+.nprice-end__cta {
+  background: #f3eee2;
+  color: #20392c !important;
+  display: flex;
+  gap: 36px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 21px 25px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  white-space: nowrap;
+}
+.nprice-end__cta:hover {
+  background: #d9be95;
+}
+.nprice-end__asterisk {
+  position: absolute;
+  right: 2%;
+  top: -70px;
+  font-size: clamp(180px, 25vw, 380px);
+  line-height: 1;
+  color: #55745a40;
+  pointer-events: none;
+}
+/* Devices */
+@media (max-width: 1200px) {
+  .nprice-hero__content {
+    padding-left: 45px;
+  }
+  .nprice-hero__headline {
+    font-size: clamp(82px, 9.2vw, 135px);
+  }
+  .nprice-hero__bottom {
+    display: block;
+  }
+  .nprice-hero__link {
+    width: max-content;
+    margin-top: 25px;
+  }
+  .nprice-explorer__layout {
+    grid-template-columns: minmax(0, 1fr) 345px;
+    gap: 17px;
+  }
+  .nprice-summary {
+    padding: 28px 24px;
+  }
+  .nprice-row__head {
+    gap: 7px;
+  }
+  .nprice-row__title {
+    gap: 12px;
+  }
+  .nprice-row__thumb {
+    width: 65px;
+    height: 70px;
+  }
+  .nprice-row__body {
+    padding-left: 95px;
+  }
+}
+@media (max-width: 1024px) {
+  .nprice-width {
+    width: min(100% - 66px, 1340px);
+  }
+  .nprice-hero {
+    min-height: 700px;
+  }
+  .nprice-hero__content {
+    padding-left: 34px;
+  }
+  .nprice-hero__headline {
+    font-size: clamp(78px, 9vw, 115px);
+  }
+  .nprice-hero__seal {
+    left: 18px;
+    width: 92px;
+    height: 92px;
+  }
+  .nprice-explorer__layout {
+    grid-template-columns: 1fr;
+  }
+  .nprice-summary {
+    position: relative;
+    top: auto;
+    min-height: 0;
+  }
+  .nprice-summary__total {
+    margin-top: 22px;
+  }
+  .nprice-packages__grid {
+    gap: 16px;
+  }
+  .nprice-package__photo {
+    height: 330px;
+  }
+  .nprice-faq__layout {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 30px;
+  }
+}
+@media (max-width: 760px) {
+  .nprice-width {
+    width: calc(100% - 40px);
+  }
+  .nprice-hero {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .nprice-hero__content {
+    min-height: 570px;
+    padding: 135px 25px 30px;
+  }
+  .nprice-hero__headline {
+    font-size: clamp(85px, 13vw, 120px);
+    margin: 70px 0 55px !important;
+  }
+  .nprice-hero__bottom {
+    padding-bottom: 27px;
+  }
+  .nprice-hero__visual {
+    min-height: 390px;
+  }
+  .nprice-hero__seal {
+    top: -42px;
+    left: auto;
+    right: 22px;
+    z-index: 2;
+    width: 94px;
+    height: 94px;
+  }
+  .nprice-hero__image-label {
+    bottom: 24px;
+    left: 22px;
+    line-height: 1.5;
+  }
+  .nprice-intro {
+    padding: 85px 0 110px;
+  }
+  .nprice-intro__grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  .nprice-intro__grid h2 {
+    font-size: clamp(52px, 8vw, 80px);
+  }
+  .nprice-explorer {
+    padding-bottom: 95px;
+  }
+  .nprice-explorer__heading {
+    margin: 60px 0 35px;
+    display: block;
+  }
+  .nprice-explorer__heading > p {
+    margin-top: 22px;
+  }
+  .nprice-explorer__heading h2 {
+    font-size: clamp(67px, 10vw, 92px);
+  }
+  .nprice-tabs {
+    gap: 7px;
+  }
+  .nprice-tabs button {
+    font-size: 9px;
+    padding: 13px 14px;
+  }
+  .nprice-quote {
+    height: 640px;
+  }
+  .nprice-quote h2 {
+    font-size: clamp(70px, 12vw, 103px);
+  }
+  .nprice-packages {
+    padding: 85px 0;
+  }
+  .nprice-packages__top {
+    display: block;
+    margin: 45px 0;
+  }
+  .nprice-packages__top h2 {
+    font-size: clamp(70px, 11vw, 98px);
+  }
+  .nprice-underlink {
+    margin-top: 30px;
+  }
+  .nprice-packages__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 55px;
+  }
+  .nprice-faq {
+    padding-bottom: 92px;
+  }
+  .nprice-faq__layout {
+    grid-template-columns: 1fr;
+  }
+  .nprice-faq__items {
+    margin-top: 20px;
+  }
+  .nprice-end {
+    padding: 85px 0;
+  }
+  .nprice-end h2 {
+    font-size: clamp(75px, 12vw, 116px);
+  }
+  .nprice-end .nprice-width > div {
+    display: block;
+  }
+  .nprice-end__cta {
+    width: max-content;
+    margin-top: 25px;
+  }
+  .nprice-end__asterisk {
+    right: -12px;
+    top: 0;
+    font-size: 170px;
+  }
+}
+@media (max-width: 540px) {
+  .nprice-hero__content {
+    min-height: 540px;
+    padding-inline: 20px;
+  }
+  .nprice-hero__headline {
+    font-size: clamp(70px, 15.3vw, 100px);
+  }
+  .nprice-hero__description {
+    font-size: 12px;
+  }
+  .nprice-hero__visual {
+    min-height: 350px;
+  }
+  .nprice-hero__seal {
+    display: none;
+  }
+  .nprice-intro__grid h2 {
+    font-size: clamp(55px, 12.4vw, 74px);
+  }
+  .nprice-explorer__heading h2 {
+    font-size: clamp(67px, 12.5vw, 86px);
+  }
+  .nprice-row__head {
+    padding: 13px;
+    gap: 5px;
+  }
+  .nprice-row__thumb {
+    width: 54px;
+    height: 62px;
+  }
+  .nprice-row__title {
+    gap: 10px;
+  }
+  .nprice-row__title small {
+    font-size: 8px;
+  }
+  .nprice-row__title strong {
+    font-size: 23px;
+  }
+  .nprice-row__value b {
+    font-size: 26px;
+  }
+  .nprice-row__value small {
+    font-size: 8px;
+  }
+  .nprice-row__expand {
+    display: none;
+  }
+  .nprice-row__chevron {
+    display: block;
+  }
+  .nprice-row__body {
+    padding: 0 15px 23px;
+  }
+  .nprice-row__options {
+    gap: 7px;
+  }
+  .nprice-row__options button {
+    font-size: 10px;
+    padding: 10px;
+  }
+  .nprice-packages__grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+  .nprice-package__photo {
+    height: 390px;
+  }
+  .nprice-quote h2 {
+    font-size: clamp(60px, 14vw, 86px);
+  }
+  .nprice-faq__items summary {
+    gap: 10px;
+  }
+  .nprice-faq__items summary strong {
+    font-size: 13px;
+  }
+  .nprice-end h2 {
+    font-size: clamp(65px, 15vw, 88px);
+  }
+  .nprice-end__cta {
+    width: 100%;
+    white-space: normal;
+  }
+  .nprice-section-index {
+    font-size: 9px;
+  }
+  .nprice-summary {
+    padding: 27px 22px;
+  }
+}
+:root[data-motion="reduced"] .nprice-site *,
+:root[data-motion="reduced"] .nprice-site *::before,
+:root[data-motion="reduced"] .nprice-site *::after {
+  animation-duration: 0.01ms !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+:root[data-motion="reduced"] .nprice-hero__link svg {
+  animation: none;
+}
+:root[data-motion="reduced"] .nprice-package:hover img {
+  transform: none !important;
+}

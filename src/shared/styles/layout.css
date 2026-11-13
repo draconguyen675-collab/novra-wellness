@@ -1,0 +1,108 @@
+/* Shared layout contracts: content scrolls with the document, controls remain reachable. */
+html {
+  scroll-padding-top: 104px;
+  scrollbar-gutter: stable;
+}
+body {
+  overflow-x: clip;
+}
+:where(section[id], [id$="comparison"]) {
+  scroll-margin-top: 104px;
+}
+:where(.ne-asym, .nb-layout, .np-grid, .nl-finder__layout) > * {
+  min-width: 0;
+}
+.nv-route-loading {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  padding: 32px;
+  text-align: center;
+  color: #263c2f;
+  background: #f6f4ed;
+}
+.nv-route-loading > span {
+  font:
+    400 clamp(60px, 12vw, 140px)/1 "Cormorant Garamond",
+    Georgia,
+    serif;
+  letter-spacing: -0.05em;
+}
+.nv-route-loading p {
+  font:
+    400 14px/1.8 "DM Sans",
+    sans-serif;
+}
+.nv-route-loading button {
+  padding: 14px 24px;
+  background: #344b3f;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+.nv-directory {
+  padding-top: 180px;
+  min-height: 85svh;
+}
+.nv-directory h1 {
+  margin: 30px 0 45px;
+}
+.nv-directory > p {
+  max-width: 650px;
+  margin-bottom: 40px;
+}
+.nv-directory .ne-list-line h3 {
+  flex: 1;
+}
+.nv-directory .ne-list-line {
+  flex-wrap: wrap;
+}
+.nv-directory .ne-list-line > span:last-child {
+  overflow-wrap: anywhere;
+}
+.nv-site .nv-footer .nv-button--light {
+  color: #243328;
+}
+.nv-site .nv-footer .nv-button--light:hover {
+  color: #243328;
+}
+.nv-footer-bottom {
+  align-items: center;
+}
+.nv-site .nm-motion-toggle {
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  min-height: 36px;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+}
+.nm-motion-toggle:focus-visible {
+  outline: 2px solid #c5ae88;
+  outline-offset: 5px;
+}
+@media (max-width: 700px) {
+  html {
+    scroll-padding-top: 88px;
+  }
+  .nv-directory {
+    padding-top: 140px;
+  }
+  .nv-directory .ne-list-line {
+    gap: 14px;
+  }
+  .nv-directory .ne-list-line > span:last-child {
+    width: 100%;
+  }
+}

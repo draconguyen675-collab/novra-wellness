@@ -1,0 +1,389 @@
+/* A guaranteed local visual test: all shapes/text are CSS, no remote image dependencies */
+.nml {
+  font-family: "DM Sans", Arial, sans-serif;
+  background: #f6f4ed;
+  color: #1a2c22;
+  overflow: clip;
+}
+.nml * {
+  box-sizing: border-box;
+}
+.nml button,
+.nml a {
+  cursor: pointer;
+}
+.nml-hero {
+  position: relative;
+  isolation: isolate;
+  height: 100svh;
+  min-height: 740px;
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+  color: #f7f2e6;
+  background: radial-gradient(circle at 75% 20%, #426b51 0%, #1c3d2b 38%, #0f211a 100%);
+}
+.nml-orbit {
+  position: absolute;
+  border: 1px solid #f5f0df5c;
+  border-radius: 50%;
+  width: min(78vw, 1050px);
+  aspect-ratio: 1;
+  left: 74%;
+  top: 46%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.nml-orbit::before {
+  content: "✳";
+  position: absolute;
+  top: 7%;
+  left: 25%;
+  font-size: 62px;
+  color: #d9caac;
+}
+.nml-orbit--two {
+  width: min(52vw, 720px);
+  left: 72%;
+  border-color: #f5f0df32;
+}
+.nml-orbit--two::before {
+  top: 80%;
+  left: 83%;
+  font-size: 32px;
+}
+.nml-hero__inner {
+  position: relative;
+  z-index: 2;
+  width: min(1440px, calc(100% - 100px));
+  margin: auto;
+  padding: 130px 0 50px;
+}
+.nml-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  letter-spacing: 0.23em;
+}
+.nml h1 {
+  font:
+    400 clamp(105px, 13.2vw, 234px)/0.78 "Cormorant Garamond",
+    Georgia,
+    serif;
+  letter-spacing: -0.055em;
+  margin: 50px 0 46px;
+}
+.nml h1 em,
+.nml-panel h2 em,
+.nml-end h2 em {
+  font-weight: 400;
+  color: #d2d9c3;
+}
+.nml-word-mask {
+  display: block;
+  overflow: hidden;
+  padding: 0 0 7px;
+}
+.nml-hero-word {
+  display: block;
+}
+.nml-hero-sub {
+  max-width: 700px;
+  display: flex;
+  align-items: flex-end;
+  gap: 35px;
+}
+.nml-hero-sub p {
+  max-width: 430px;
+  line-height: 1.8;
+  font-size: 14px;
+}
+.nml-actions {
+  display: flex;
+  gap: 11px;
+  flex-wrap: wrap;
+}
+.nml-actions button,
+.nml-actions a,
+.nml-end__button,
+.nml-end button {
+  border: 1px solid #eee5d9;
+  color: inherit;
+  background: transparent;
+  padding: 16px 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+.nml-actions button:hover,
+.nml-actions a:hover {
+  background: #f5f1e6;
+  color: #193222;
+}
+.nml-status {
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  z-index: 2;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.nml-live-dot {
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  background: #afdb7b;
+  box-shadow: 0 0 0 7px #afdb7b24;
+  animation: nml-pulse 1.5s ease-in-out infinite;
+}
+@keyframes nml-pulse {
+  50% {
+    box-shadow: 0 0 0 13px #afdb7b08;
+  }
+}
+.nml-ticker {
+  height: 132px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #bdad88;
+  color: #1b3225;
+}
+.nml-ticker__track {
+  display: flex;
+  width: max-content;
+  animation: nml-slide 24s linear infinite;
+}
+.nml-ticker__track span {
+  white-space: nowrap;
+  font:
+    italic 400 clamp(65px, 7vw, 105px)/1 "Cormorant Garamond",
+    Georgia,
+    serif;
+}
+.nml-ticker__track b {
+  font:
+    400 0.6em Georgia,
+    serif;
+  color: #63735b;
+  margin: 0 25px;
+}
+@keyframes nml-slide {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.nml-chapter {
+  height: 340vh;
+  position: relative;
+}
+.nml-stage {
+  height: 100svh;
+  min-height: 700px;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background: #163326;
+  color: #f8f5e8;
+}
+.nml-stage__counter {
+  position: absolute;
+  top: 45px;
+  left: 5%;
+  z-index: 6;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+}
+.nml-stage__counter span {
+  color: #c9cfb6;
+  margin-left: 20px;
+}
+.nml-stage__scroll {
+  position: absolute;
+  right: 5%;
+  bottom: 38px;
+  z-index: 6;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+}
+.nml-panel {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 80px 10%;
+  overflow: hidden;
+  isolation: isolate;
+}
+.nml-panel--1 {
+  background: radial-gradient(circle at 70% 28%, #789778 0%, #163b2d 60%, #142e24);
+}
+.nml-panel--2 {
+  background: radial-gradient(circle at 25% 60%, #b7a478 0%, #665d44 35%, #292923 80%);
+}
+.nml-panel--3 {
+  background: radial-gradient(circle at 70% 35%, #456a62 0%, #183a42 55%, #111f23);
+}
+.nml-panel__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+.nml-panel__content > span {
+  font-size: 12px;
+  letter-spacing: 0.24em;
+}
+.nml-panel__title {
+  font:
+    400 clamp(85px, 10.5vw, 180px)/0.8 "Cormorant Garamond",
+    Georgia,
+    serif;
+  letter-spacing: -0.045em;
+  margin: 45px 0;
+}
+.nml-panel__content p {
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 420px;
+  margin: auto;
+  color: #e5ebe1;
+}
+.nml-panel__accent {
+  position: absolute;
+  z-index: 1;
+  top: 13%;
+  right: 5%;
+  font:
+    400 clamp(340px, 50vw, 900px)/1 Georgia,
+    serif;
+  color: #ffffff10;
+  transform: rotate(-18deg);
+}
+.nml-panel__number {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  font:
+    400 85px "Cormorant Garamond",
+    serif;
+  color: #ffffff70;
+}
+.nml-end {
+  padding: 150px max(30px, 9vw);
+  min-height: 650px;
+}
+.nml-end > span {
+  font-size: 11px;
+  letter-spacing: 0.23em;
+}
+.nml-end h2 {
+  font:
+    400 clamp(95px, 10vw, 170px)/0.8 "Cormorant Garamond",
+    Georgia,
+    serif;
+  margin: 45px 0 55px;
+}
+.nml-end h2 em {
+  color: #577c61;
+}
+.nml-end > div {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.nml-end__button,
+.nml-end button {
+  border-color: #48624b;
+  color: #1d3929;
+}
+.nml-end__button:hover,
+.nml-end button:hover {
+  background: #1a3628;
+  color: white;
+}
+.nml-end > p {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #718071;
+  font-size: 12px;
+  margin-top: 75px;
+}
+@media (max-width: 850px) {
+  .nml-hero {
+    min-height: 650px;
+  }
+  .nml-hero__inner {
+    width: calc(100% - 40px);
+  }
+  .nml h1 {
+    font-size: clamp(78px, 13vw, 140px);
+  }
+  .nml-hero-sub {
+    display: block;
+  }
+  .nml-hero-sub p {
+    margin-bottom: 30px;
+  }
+  .nml-orbit {
+    left: 85%;
+    width: 110vw;
+  }
+  .nml-panel__title {
+    font-size: clamp(70px, 12vw, 115px);
+  }
+  .nml-chapter {
+    height: 300vh;
+  }
+  .nml-ticker {
+    height: 96px;
+  }
+  .nml-status {
+    left: 20px;
+  }
+}
+@media (max-width: 560px) {
+  .nml-hero__inner {
+    padding-top: 160px;
+  }
+  .nml h1 {
+    font-size: clamp(69px, 13.3vw, 93px);
+  }
+  .nml-kicker {
+    font-size: 9px;
+  }
+  .nml-panel {
+    padding: 60px 20px;
+  }
+  .nml-panel__title {
+    font-size: 62px;
+  }
+  .nml-stage__counter {
+    left: 20px;
+    font-size: 9px;
+  }
+  .nml-stage__scroll {
+    right: 20px;
+    font-size: 9px;
+  }
+}
+:root[data-motion="reduced"] .nml-ticker__track,
+:root[data-motion="reduced"] .nml-live-dot {
+  animation: none !important;
+}
+:root[data-motion="reduced"] .nml-chapter {
+  height: 100svh;
+}
+:root[data-motion="reduced"] .nml-panel:not(.nml-panel--1) {
+  display: none;
+}

@@ -1,0 +1,2011 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap");
+
+/* Scoped design system — does not replace Tailwind or your existing app CSS */
+.nv-site {
+  --nv-ink: #253127;
+  --nv-green: #344b3f;
+  --nv-forest: #17291f;
+  --nv-cream: #f6f4ed;
+  --nv-sand: #eae6db;
+  --nv-sage: #a2aa91;
+  --nv-gold: #c5ae88;
+  --nv-muted: #777b70;
+  background: var(--nv-cream);
+  color: var(--nv-ink);
+  font-family: "DM Sans", sans-serif;
+  overflow: clip;
+  min-width: 320px;
+  -webkit-font-smoothing: antialiased;
+}
+.nv-site *,
+.nv-site *::before,
+.nv-site *::after {
+  box-sizing: border-box;
+}
+.nv-site a {
+  color: inherit;
+  text-decoration: none;
+}
+.nv-site button,
+.nv-site input,
+.nv-site select {
+  font: inherit;
+}
+.nv-site button {
+  cursor: pointer;
+}
+.nv-site button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+.nv-site img {
+  display: block;
+  width: 100%;
+}
+.nv-site h1,
+.nv-site h2,
+.nv-site h3,
+.nv-site p,
+.nv-site figure,
+.nv-site blockquote {
+  margin: 0;
+}
+.nv-site :focus-visible {
+  outline: 3px solid #a78652;
+  outline-offset: 4px;
+}
+.nv-site ::selection {
+  background: #c6ad84;
+  color: #17291f;
+}
+.nv-container {
+  width: min(100% - 96px, 1380px);
+  margin-inline: auto;
+}
+.nv-section {
+  padding-block: clamp(90px, 11vw, 172px);
+}
+.nv-display {
+  font:
+    400 clamp(68px, 7.2vw, 124px)/0.88 "Cormorant Garamond",
+    Georgia,
+    serif;
+  letter-spacing: -0.055em;
+}
+.nv-display em {
+  font-weight: 400;
+  color: #768574;
+}
+.nv-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 10px;
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 0.23em;
+  text-transform: uppercase;
+}
+.nv-eyebrow--dark {
+  color: #607369;
+}
+.nv-eyebrow span {
+  color: var(--nv-muted);
+}
+.nv-line {
+  display: inline-block;
+  width: 35px;
+  height: 1px;
+  background: currentColor;
+}
+.nv-section-index {
+  padding-bottom: 22px;
+  margin-bottom: clamp(42px, 5vw, 80px);
+  border-bottom: 1px solid #bdc0b3;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.17em;
+}
+.nv-text-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 0 0 10px;
+  border-bottom: 1px solid currentColor;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: gap 0.25s ease;
+}
+.nv-text-link:hover {
+  gap: 40px;
+}
+.nv-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  min-height: 58px;
+  padding: 16px 25px;
+  border: 1px solid transparent;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition:
+    background 0.25s,
+    color 0.25s,
+    transform 0.25s;
+}
+.nv-button:hover:not(:disabled) {
+  transform: translateY(-3px);
+}
+.nv-site .nv-button--light {
+  color: #243328;
+  background: var(--nv-cream);
+}
+.nv-button--light:hover {
+  background: #dcd7cb;
+}
+.nv-site .nv-button--dark {
+  color: #fff;
+  background: var(--nv-green);
+}
+.nv-button--dark:hover {
+  background: var(--nv-forest);
+}
+.nv-button--full {
+  width: 100%;
+}
+.nv-skip {
+  position: fixed;
+  top: -80px;
+  left: 20px;
+  z-index: 3000;
+  color: #fff !important;
+  padding: 12px 20px;
+  background: #17291f;
+}
+.nv-skip:focus {
+  top: 15px;
+}
+
+/* Header */
+.nv-header {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 50;
+  color: #fff;
+  padding: 0 clamp(24px, 4.2vw, 76px);
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  transition:
+    background 0.3s,
+    color 0.3s,
+    height 0.3s;
+}
+.nv-header--solid {
+  position: fixed;
+  height: 82px;
+  background: rgba(246, 244, 237, 0.96);
+  color: var(--nv-ink);
+  box-shadow: 0 8px 32px rgba(15, 31, 22, 0.05);
+  backdrop-filter: blur(20px);
+}
+.nv-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.nv-logo-symbol {
+  width: 42px;
+  height: 42px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font:
+    600 26px/0.95 "Cormorant Garamond",
+    serif;
+  position: relative;
+}
+.nv-logo-symbol span {
+  position: absolute;
+  font:
+    12px "DM Sans",
+    sans-serif;
+  top: -6px;
+  right: -5px;
+}
+.nv-logo-type {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  letter-spacing: 0.07em;
+  line-height: 0.75;
+}
+.nv-logo-type small {
+  display: block;
+  margin-top: 9px;
+  font:
+    600 7px "DM Sans",
+    sans-serif;
+  letter-spacing: 0.25em;
+}
+.nv-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 2.6vw, 38px);
+}
+.nv-nav a {
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  transition: opacity 0.2s;
+}
+.nv-nav a:hover {
+  opacity: 0.6;
+}
+.nv-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nv-nav-book {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  background: transparent;
+  border: 1px solid currentColor;
+  color: inherit;
+  padding: 13px 17px;
+  text-transform: uppercase;
+  font-size: 10px !important;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  transition:
+    color 0.25s,
+    background 0.25s;
+  white-space: nowrap;
+}
+.nv-nav-book:hover {
+  background: var(--nv-cream);
+  color: var(--nv-forest);
+}
+.nv-header--solid .nv-nav-book:hover {
+  background: var(--nv-forest);
+  color: #fff;
+}
+.nv-menu-button {
+  display: none;
+  padding: 8px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+}
+.nv-mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 18px 24px 30px;
+  background: var(--nv-cream);
+  color: var(--nv-ink);
+  box-shadow: 0 14px 30px #17291f22;
+}
+.nv-mobile-menu a {
+  border-bottom: 1px solid #c9c9bf;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 17px 3px;
+  font:
+    400 36px "Cormorant Garamond",
+    serif;
+}
+.nv-mobile-menu a span {
+  font:
+    600 10px "DM Sans",
+    sans-serif;
+  color: #8b8b7e;
+}
+.nv-mobile-menu a svg {
+  margin-left: auto;
+}
+.nv-mobile-menu button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: var(--nv-green);
+  border: 0;
+  color: #fff;
+  padding: 18px;
+  margin-top: 25px;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+/* Hero: photographic poster + outsize editorial title */
+.nv-hero {
+  position: relative;
+  min-height: min(930px, 100svh);
+  min-height: max(730px, 100svh);
+  overflow: hidden;
+  background: #243b31;
+  color: #fff;
+}
+.nv-hero-photo {
+  position: absolute;
+  inset: 0;
+  transform-origin: 70% center;
+}
+.nv-hero-photo img {
+  height: 100%;
+  object-fit: cover;
+  object-position: 68% center;
+}
+.nv-hero-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(18, 33, 25, 0.82) 0%,
+      rgba(18, 33, 25, 0.56) 49%,
+      rgba(18, 33, 25, 0.1) 100%
+    ),
+    linear-gradient(0deg, rgba(9, 23, 17, 0.45), transparent 40%);
+}
+.nv-hero-grain {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.15;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.55' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+}
+.nv-hero-content {
+  position: relative;
+  z-index: 1;
+  min-height: max(730px, 100svh);
+  padding-top: clamp(170px, 20vh, 250px);
+  padding-bottom: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.nv-hero-kicker {
+  margin-bottom: 31px;
+  color: #e3e5d9;
+}
+.nv-hero-title {
+  font:
+    400 clamp(100px, 13vw, 230px)/0.73 "Cormorant Garamond",
+    serif;
+  letter-spacing: -0.07em;
+}
+.nv-clip {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.13em;
+}
+.nv-hero-word {
+  display: block;
+  width: fit-content;
+}
+.nv-hero-word--italic {
+  font-style: italic;
+  padding-left: clamp(40px, 8vw, 140px);
+  color: #d7ddcd;
+}
+.nv-period {
+  color: #d0b88c;
+}
+.nv-hero-bottom {
+  display: flex;
+  align-items: flex-end;
+  gap: clamp(24px, 6vw, 105px);
+  margin-top: 35px;
+}
+.nv-hero-sub {
+  width: min(300px, 40vw);
+  font:
+    400 14px/1.9 "DM Sans",
+    sans-serif;
+  color: #f0f0e7;
+}
+.nv-hero-vertical {
+  position: absolute;
+  z-index: 1;
+  right: 35px;
+  top: 45%;
+  writing-mode: vertical-rl;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+}
+.nv-hero-vertical span {
+  margin: 20px 0;
+}
+.nv-scroll-cue {
+  position: absolute;
+  z-index: 2;
+  left: max(48px, calc((100% - 1380px) / 2));
+  bottom: 34px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+}
+.nv-hero-count {
+  position: absolute;
+  z-index: 1;
+  bottom: 34px;
+  right: 50px;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+}
+
+/* Infinite marquee */
+.nv-ticker {
+  height: clamp(100px, 10vw, 155px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid #c6c9bf;
+}
+.nv-ticker-track {
+  display: flex;
+  gap: 35px;
+  width: max-content;
+  animation: nv-marquee var(--nv-marquee-duration, 12s) linear infinite;
+  will-change: transform;
+}
+.nv-ticker-track > span {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font:
+    400 clamp(56px, 7vw, 108px)/1 "Cormorant Garamond",
+    serif;
+  letter-spacing: -0.035em;
+}
+.nv-ticker-track b {
+  margin: 0 20px;
+  color: #9aab97;
+  font:
+    400 0.55em "DM Sans",
+    sans-serif;
+}
+@keyframes nv-marquee {
+  to {
+    transform: translateX(var(--nv-marquee-distance, calc(-25% - 8.75px)));
+  }
+}
+
+/* Story */
+.nv-story-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: start;
+  gap: clamp(60px, 8vw, 150px);
+}
+.nv-story-copy {
+  padding-top: clamp(20px, 5vw, 95px);
+}
+.nv-story-copy .nv-display {
+  margin: 37px 0 30px;
+}
+.nv-story-copy > p {
+  width: min(440px, 100%);
+  color: #6f746b;
+  font-size: 14px;
+  line-height: 2;
+}
+.nv-story-copy .nv-text-link {
+  margin-top: 42px;
+}
+.nv-story-aside {
+  margin-top: clamp(80px, 12vw, 175px);
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 25px;
+  font-size: 10px;
+  line-height: 1.8;
+  letter-spacing: 0.12em;
+}
+.nv-aside-num {
+  font:
+    400 96px/0.7 "Cormorant Garamond",
+    serif;
+  letter-spacing: -0.08em;
+  color: #b1bba8;
+}
+.nv-story-visual {
+  position: relative;
+  margin: 0 38px 35px 0;
+  height: clamp(530px, 52vw, 720px);
+}
+.nv-story-visual > img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.nv-visual-caption {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.17em;
+}
+.nv-stamp {
+  position: absolute;
+  bottom: -57px;
+  right: -60px;
+  height: 148px;
+  width: 148px;
+  border-radius: 50%;
+  background: #e0dfd1;
+  color: #364938;
+  display: grid;
+  place-items: center;
+}
+.nv-stamp svg {
+  position: absolute;
+  width: 100%;
+  animation: nv-spin 28s linear infinite;
+}
+.nv-stamp svg text {
+  font:
+    9.5px "DM Sans",
+    sans-serif;
+  letter-spacing: 1.7px;
+  fill: #364938;
+}
+.nv-stamp > span {
+  font-size: 41px;
+}
+@keyframes nv-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Treatment grid */
+.nv-treatments {
+  background: #eae9df;
+}
+.nv-heading-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+.nv-heading-row .nv-display {
+  margin-top: 25px;
+}
+.nv-heading-row > p {
+  max-width: 315px;
+  color: #687168;
+  font-size: 14px;
+  line-height: 1.95;
+  padding-bottom: 8px;
+}
+.nv-filter-row {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #bfc3b6;
+  margin-bottom: 45px;
+}
+.nv-filter {
+  border: 0;
+  padding: 0 0 9px;
+  background: transparent;
+  color: #888b80;
+  font-size: 12px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s;
+}
+.nv-filter--active {
+  color: #2c4436;
+  border-color: #2c4436;
+}
+.nv-filter span {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 12px;
+}
+.nv-treatment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 24px;
+  row-gap: 70px;
+}
+.nv-treatment-card {
+  min-width: 0;
+}
+.nv-treatment-image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 0.79;
+  background: #d7dccf;
+}
+.nv-treatment-image img {
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.5s ease;
+}
+.nv-treatment-card:hover .nv-treatment-image img {
+  filter: saturate(1.1);
+}
+.nv-card-tag {
+  position: absolute;
+  top: 19px;
+  left: 18px;
+  padding: 10px 13px;
+  background: #f6f4edee;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+.nv-card-arrow {
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: var(--nv-cream);
+  color: var(--nv-forest);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition:
+    transform 0.25s,
+    background 0.25s;
+}
+.nv-card-arrow:hover {
+  transform: rotate(45deg);
+  background: #d4dbc9;
+}
+.nv-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 22px 0 13px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #7b7c70;
+  text-transform: uppercase;
+}
+.nv-card-meta span:last-child {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.nv-treatment-card h3 {
+  font:
+    400 clamp(30px, 2.8vw, 43px)/1.05 "Cormorant Garamond",
+    serif;
+  letter-spacing: -0.028em;
+}
+.nv-treatment-card p {
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 1.9;
+  color: #75796f;
+  min-height: 44px;
+}
+.nv-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  border-top: 1px solid #bdc0b3;
+  margin-top: 19px;
+  padding-top: 18px;
+}
+.nv-card-bottom > span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.nv-card-bottom button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 0;
+  padding: 7px 0;
+  background: transparent;
+  text-transform: uppercase;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+/* Full-bleed statement */
+.nv-manifesto {
+  min-height: min(810px, 95svh);
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #183126;
+  color: white;
+}
+.nv-manifesto-photo {
+  position: absolute;
+  inset: -13% 0;
+}
+.nv-manifesto-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.nv-manifesto-shade {
+  position: absolute;
+  inset: 0;
+  background: rgba(16, 31, 23, 0.62);
+}
+.nv-manifesto-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 100px 0;
+}
+.nv-manifesto-content h2 {
+  margin: 32px auto;
+  font:
+    400 clamp(68px, 9vw, 150px)/0.9 "Cormorant Garamond",
+    serif;
+  letter-spacing: -0.055em;
+}
+.nv-manifesto-content h2 em {
+  color: #d9dfd1;
+  font-weight: 400;
+}
+.nv-manifesto-content p {
+  font-size: 12px;
+  color: #e4e9dc;
+  letter-spacing: 0.08em;
+}
+.nv-manifesto-footer {
+  position: absolute;
+  bottom: 30px;
+  width: min(100% - 96px, 1380px);
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  border-top: 1px solid #ffffff77;
+  padding-top: 22px;
+}
+.nv-manifesto-footer span {
+  font-size: 24px;
+}
+
+/* Ritual builder */
+.nv-ritual {
+  background: var(--nv-cream);
+}
+.nv-ritual-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(50px, 7vw, 110px);
+  align-items: start;
+}
+.nv-ritual-text .nv-display {
+  margin: 25px 0 26px;
+}
+.nv-ritual-text > p {
+  max-width: 450px;
+  color: #72776d;
+  font-size: 14px;
+  line-height: 1.9;
+}
+.nv-ritual-image {
+  height: 410px;
+  margin-top: 55px;
+  overflow: hidden;
+}
+.nv-ritual-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.nv-ritual-builder {
+  padding: clamp(25px, 4.3vw, 62px);
+  background: #e9e9df;
+  margin-top: 60px;
+}
+.nv-builder-top {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+}
+.nv-ritual-option {
+  display: grid;
+  grid-template-columns: 26px 1fr auto 32px;
+  align-items: center;
+  gap: 15px;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  border-top: 1px solid #c7c9bd;
+  padding: 22px 0;
+  color: #27382d;
+}
+.nv-ritual-option-index {
+  align-self: start;
+  color: #879087;
+  font-size: 10px;
+}
+.nv-ritual-option-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.nv-ritual-option-text strong {
+  font:
+    400 clamp(23px, 2.3vw, 33px)/1.1 "Cormorant Garamond",
+    serif;
+}
+.nv-ritual-option-text small {
+  font-size: 10px;
+  color: #81857b;
+}
+.nv-ritual-option-price {
+  font-size: 13px;
+  font-weight: 600;
+}
+.nv-ritual-toggle {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #aab1a4;
+  border-radius: 50%;
+  transition: background 0.25s;
+}
+.nv-ritual-option--active .nv-ritual-toggle {
+  background: var(--nv-green);
+  color: white;
+}
+.nv-builder-total {
+  border-top: 1px solid #aab4a6;
+  padding: 27px 0;
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.nv-builder-total > div {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.nv-builder-total > div:last-child {
+  text-align: right;
+}
+.nv-builder-total span {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #858d81;
+}
+.nv-builder-total strong {
+  font:
+    400 26px "Cormorant Garamond",
+    serif;
+}
+.nv-builder-note {
+  font-size: 10px;
+  color: #717e71;
+  line-height: 1.6;
+  margin-top: 18px !important;
+}
+
+/* Gallery */
+.nv-spaces {
+  background: #dfe5da;
+}
+.nv-spaces-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+}
+.nv-spaces figure {
+  position: relative;
+  overflow: hidden;
+  background: #b5bdaf;
+}
+.nv-spaces figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.nv-spaces figure figcaption {
+  position: absolute;
+  bottom: 22px;
+  left: 24px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-shadow: 0 2px 10px #0007;
+}
+.nv-space-large {
+  height: clamp(480px, 60vw, 790px);
+}
+.nv-space-stack {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 24px;
+}
+.nv-space-stack figure {
+  min-height: 310px;
+}
+.nv-spaces-quote {
+  background: #344a3f;
+  color: #f6f4ed;
+  min-height: 280px;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.nv-spaces-quote .nv-asterisk {
+  font-size: 37px;
+  color: #c5ae88;
+}
+.nv-spaces-quote p {
+  font:
+    400 clamp(36px, 4vw, 63px)/0.98 "Cormorant Garamond",
+    serif;
+}
+.nv-spaces-quote p em {
+  color: #ccd4c8;
+}
+.nv-spaces-quote > span:last-child {
+  font-size: 9px;
+  letter-spacing: 0.16em;
+}
+
+/* Difference */
+.nv-difference {
+  background: #f6f4ed;
+}
+.nv-difference-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(50px, 7vw, 120px);
+}
+.nv-difference .nv-display {
+  margin-top: 35px;
+}
+.nv-difference-items {
+  border-top: 1px solid #bac0b3;
+}
+.nv-difference-item {
+  display: grid;
+  grid-template-columns: 45px 1fr 35px;
+  gap: 22px;
+  padding: 31px 0;
+  border-bottom: 1px solid #bac0b3;
+}
+.nv-difference-item > span:first-child {
+  font-size: 10px;
+  font-weight: 600;
+  color: #829084;
+  padding-top: 7px;
+}
+.nv-difference-item h3 {
+  font:
+    400 41px/1 "Cormorant Garamond",
+    serif;
+}
+.nv-difference-item p {
+  max-width: 360px;
+  margin-top: 11px;
+  font-size: 12px;
+  line-height: 1.85;
+  color: #798076;
+}
+.nv-difference-flower {
+  font-size: 24px;
+  color: #91a28f;
+}
+
+/* Testimonials */
+.nv-voices {
+  background: #d9dfd4;
+}
+.nv-voices-shell {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(50px, 7vw, 120px);
+}
+.nv-voices .nv-display {
+  margin-top: 25px;
+}
+.nv-voice-detail {
+  padding-top: 10px;
+}
+.nv-quote-mark {
+  font:
+    400 130px/0.5 "Cormorant Garamond",
+    serif;
+  color: #81917e;
+}
+.nv-voice-detail blockquote {
+  margin-top: 34px;
+  max-width: 680px;
+  font:
+    400 clamp(37px, 4vw, 61px)/1.15 "Cormorant Garamond",
+    serif;
+  letter-spacing: -0.025em;
+}
+.nv-voice-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+  border-top: 1px solid #abb5a7;
+  margin-top: 55px;
+  padding-top: 20px;
+}
+.nv-voice-bottom > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.nv-voice-bottom strong {
+  font-size: 12px;
+}
+.nv-voice-bottom span {
+  color: #69736a;
+  font-size: 10px;
+}
+.nv-slider-actions {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.nv-slider-actions button {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid #a4b0a1;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s;
+}
+.nv-slider-actions button:hover {
+  background: #f4f5ee;
+}
+.nv-slider-actions > span {
+  min-width: 43px;
+  text-align: center;
+}
+
+/* FAQ */
+.nv-faq {
+  background: #f6f4ed;
+}
+.nv-faq-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: clamp(50px, 9vw, 160px);
+}
+.nv-faq .nv-display {
+  margin-top: 25px;
+}
+.nv-faq-layout > div:first-child > p {
+  margin-top: 28px;
+  max-width: 350px;
+  font-size: 13px;
+  line-height: 1.9;
+  color: #6e796f;
+}
+.nv-faq-items {
+  border-top: 1px solid #b4bcb0;
+}
+.nv-faq-items details {
+  border-bottom: 1px solid #b4bcb0;
+}
+.nv-faq-items summary {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 28px 1fr 25px;
+  gap: 18px;
+  align-items: center;
+  padding: 25px 0;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+.nv-faq-items summary::-webkit-details-marker {
+  display: none;
+}
+.nv-faq-items summary span {
+  color: #89948a;
+  font-size: 10px;
+}
+.nv-faq-items summary svg {
+  transition: transform 0.25s;
+}
+.nv-faq-items details[open] summary svg {
+  transform: rotate(180deg);
+}
+.nv-faq-items details p {
+  padding: 0 50px 25px 46px;
+  color: #757e74;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* Footer & ending */
+.nv-closing {
+  height: clamp(520px, 70vw, 760px);
+  position: relative;
+  display: grid;
+  place-items: center;
+  background: #273d30;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+.nv-closing > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.nv-closing-shade {
+  position: absolute;
+  inset: 0;
+  background: #18271f99;
+}
+.nv-closing-content {
+  position: relative;
+  z-index: 1;
+  padding: 35px;
+}
+.nv-closing-content h2 {
+  margin: 25px 0;
+  font:
+    400 clamp(70px, 9vw, 145px)/0.95 "Cormorant Garamond",
+    serif;
+  letter-spacing: -0.055em;
+}
+.nv-closing-content h2 em {
+  color: #d4dccf;
+}
+.nv-closing-content p {
+  font-size: 13px;
+  margin-bottom: 38px;
+}
+.nv-footer {
+  background: #18291f;
+  color: #f2f0e9;
+  padding-top: 90px;
+}
+.nv-footer-top {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 60px;
+  padding-bottom: 95px;
+}
+.nv-footer-logo {
+  font:
+    400 clamp(92px, 13vw, 195px)/0.75 "Cormorant Garamond",
+    serif;
+  letter-spacing: -0.055em;
+}
+.nv-footer-logo span {
+  color: #b8c5ae;
+  font:
+    400 0.24em "DM Sans",
+    sans-serif;
+  vertical-align: top;
+}
+.nv-footer-top > div > p {
+  font:
+    400 28px/1.1 "Cormorant Garamond",
+    serif;
+  color: #a4b7a5;
+  margin-top: 38px;
+}
+.nv-footer nav {
+  display: flex;
+  gap: clamp(40px, 7vw, 120px);
+  padding-top: 15px;
+}
+.nv-footer nav > div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.nv-footer nav span {
+  font-size: 9px;
+  color: #9fb3a2;
+  letter-spacing: 0.2em;
+  margin-bottom: 12px;
+}
+.nv-footer nav a {
+  font-size: 12px;
+  transition: opacity 0.2s;
+}
+.nv-footer nav a:hover {
+  opacity: 0.6;
+}
+.nv-footer-bottom {
+  border-top: 1px solid #ffffff40;
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 9px;
+  letter-spacing: 0.13em;
+  color: #a8b6a8;
+}
+
+/* Booking preview modal */
+.nv-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  background: rgba(10, 24, 17, 0.75);
+  padding: 20px;
+  display: grid;
+  place-items: center;
+  overflow-y: auto;
+}
+.nv-modal {
+  position: relative;
+  background: #f6f4ed;
+  color: #253127;
+  width: min(100%, 550px);
+  max-height: min(90svh, 900px);
+  overflow-y: auto;
+  padding: clamp(28px, 4vw, 54px);
+  box-shadow: 0 25px 85px #0005;
+}
+.nv-modal-close {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  border: 1px solid #c8cbbc;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+}
+.nv-modal-title {
+  font:
+    400 clamp(50px, 6vw, 73px)/0.96 "Cormorant Garamond",
+    serif;
+  letter-spacing: -0.04em;
+  margin: 22px 0 28px !important;
+}
+.nv-modal-title em {
+  color: #789079;
+}
+.nv-selected-booking {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid #c8cbbc;
+  border-bottom: 1px solid #c8cbbc;
+  padding: 19px 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+.nv-selected-booking span:last-child {
+  white-space: nowrap;
+}
+.nv-modal-note {
+  color: #6e796e;
+  font-size: 11px;
+  line-height: 1.7;
+  margin: 19px 0 !important;
+}
+.nv-book-form {
+  display: grid;
+  gap: 15px;
+}
+.nv-book-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+}
+.nv-book-form input,
+.nv-book-form select {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 13px;
+  border: 1px solid #bfc6bb;
+  background: #fff;
+  color: #253127;
+  border-radius: 0;
+  font-size: 13px;
+}
+.nv-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.nv-form-error {
+  font-size: 12px;
+  color: #a13323;
+}
+.nv-success {
+  text-align: center;
+  padding-block: 40px 20px;
+}
+.nv-success-icon {
+  margin: 0 auto 26px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #b5c2b6;
+  color: #344b3f;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+.nv-success > p {
+  color: #778177;
+  font-size: 12px;
+  line-height: 1.8;
+  margin-bottom: 30px !important;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .nv-container {
+    width: calc(100% - 64px);
+  }
+  .nv-nav {
+    display: none;
+  }
+  .nv-menu-button {
+    display: grid;
+    place-items: center;
+  }
+  .nv-hero-title {
+    font-size: clamp(95px, 14vw, 180px);
+  }
+  .nv-story-grid,
+  .nv-ritual-layout,
+  .nv-difference-layout,
+  .nv-voices-shell,
+  .nv-faq-layout {
+    gap: 55px;
+  }
+  .nv-treatment-grid {
+    gap: 20px;
+    row-gap: 60px;
+  }
+  .nv-footer-top {
+    gap: 35px;
+  }
+}
+/* Mobile */
+@media (max-width: 700px) {
+  .nv-container {
+    width: calc(100% - 40px);
+  }
+  .nv-section {
+    padding-block: 82px;
+  }
+  .nv-section-index {
+    font-size: 8px;
+    letter-spacing: 0.12em;
+    margin-bottom: 42px;
+  }
+  .nv-display {
+    font-size: clamp(54px, 11.5vw, 87px);
+  }
+  .nv-header {
+    height: 78px;
+    padding: 0 20px;
+  }
+  .nv-header--solid {
+    height: 70px;
+  }
+  .nv-nav-book {
+    display: none;
+  }
+  .nv-logo-type {
+    font-size: 24px;
+  }
+  .nv-hero,
+  .nv-hero-content {
+    min-height: max(700px, 94svh);
+  }
+  .nv-hero-photo img {
+    object-position: 63% center;
+  }
+  .nv-hero-shade {
+    background:
+      linear-gradient(90deg, #14261fbb, #14261f44),
+      linear-gradient(0deg, #14261faa, transparent 75%);
+  }
+  .nv-hero-content {
+    padding: 160px 0 160px;
+    justify-content: center;
+  }
+  .nv-hero-kicker {
+    margin-bottom: 23px;
+    font-size: 8px;
+  }
+  .nv-hero-title {
+    font-size: clamp(92px, 17vw, 145px);
+  }
+  .nv-hero-word--italic {
+    padding-left: 30px;
+  }
+  .nv-hero-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    margin-top: 30px;
+  }
+  .nv-hero-sub {
+    width: min(360px, 95%);
+  }
+  .nv-hero-vertical {
+    display: none;
+  }
+  .nv-scroll-cue {
+    left: 20px;
+    bottom: 28px;
+  }
+  .nv-hero-count {
+    right: 20px;
+    bottom: 29px;
+  }
+  .nv-ticker {
+    height: 90px;
+  }
+  .nv-story-grid,
+  .nv-ritual-layout,
+  .nv-difference-layout,
+  .nv-voices-shell,
+  .nv-faq-layout {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+  .nv-story-copy {
+    padding: 0;
+  }
+  .nv-story-copy .nv-display {
+    margin: 25px 0;
+  }
+  .nv-story-aside {
+    margin-top: 50px;
+  }
+  .nv-story-visual {
+    margin: 5px 20px 50px 0;
+    height: 510px;
+  }
+  .nv-stamp {
+    width: 105px;
+    height: 105px;
+    right: -27px;
+    bottom: -37px;
+  }
+  .nv-heading-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    margin-bottom: 35px;
+  }
+  .nv-heading-row > p {
+    max-width: 100%;
+  }
+  .nv-filter-row {
+    gap: 14px 24px;
+  }
+  .nv-treatment-grid {
+    grid-template-columns: 1fr;
+    gap: 46px;
+  }
+  .nv-treatment-image {
+    aspect-ratio: 0.98;
+  }
+  .nv-treatment-card h3 {
+    font-size: 37px;
+  }
+  .nv-manifesto {
+    min-height: 600px;
+  }
+  .nv-manifesto-content h2 {
+    font-size: clamp(58px, 12vw, 90px);
+  }
+  .nv-manifesto-footer {
+    width: calc(100% - 40px);
+    font-size: 8px;
+  }
+  .nv-ritual-builder {
+    padding: 24px 18px;
+    margin: 0;
+  }
+  .nv-ritual-image {
+    height: 310px;
+    margin-top: 30px;
+  }
+  .nv-builder-top span:last-child {
+    display: none;
+  }
+  .nv-ritual-option {
+    grid-template-columns: 19px 1fr auto 28px;
+    gap: 8px;
+  }
+  .nv-ritual-option-text strong {
+    font-size: 25px;
+  }
+  .nv-ritual-option-price {
+    font-size: 11px;
+  }
+  .nv-spaces-grid {
+    grid-template-columns: 1fr;
+  }
+  .nv-space-large {
+    height: 520px;
+  }
+  .nv-space-stack figure {
+    height: 360px;
+  }
+  .nv-spaces-quote {
+    min-height: 240px;
+  }
+  .nv-difference-item {
+    grid-template-columns: 23px 1fr 22px;
+    gap: 12px;
+  }
+  .nv-difference-item h3 {
+    font-size: 36px;
+  }
+  .nv-voice-detail blockquote {
+    font-size: 40px;
+  }
+  .nv-voice-bottom {
+    align-items: center;
+  }
+  .nv-slider-actions {
+    gap: 6px;
+  }
+  .nv-slider-actions button {
+    width: 36px;
+    height: 36px;
+  }
+  .nv-faq-items summary {
+    font-size: 12px;
+    gap: 8px;
+    grid-template-columns: 25px 1fr 20px;
+  }
+  .nv-closing {
+    height: 550px;
+  }
+  .nv-closing-content h2 {
+    font-size: clamp(63px, 12vw, 90px);
+  }
+  .nv-footer {
+    padding-top: 78px;
+  }
+  .nv-footer-top {
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
+  .nv-footer-logo {
+    font-size: 110px;
+  }
+  .nv-footer nav {
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .nv-footer-bottom {
+    line-height: 1.9;
+  }
+  .nv-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .nv-selected-booking {
+    flex-direction: column;
+  }
+}
+@media (max-width: 380px) {
+  .nv-hero-title {
+    font-size: 86px;
+  }
+  .nv-hero-sub {
+    font-size: 12px;
+  }
+  .nv-ritual-option-text strong {
+    font-size: 22px;
+  }
+  .nv-ritual-option {
+    grid-template-columns: 15px 1fr auto 23px;
+  }
+  .nv-builder-total strong {
+    font-size: 22px;
+  }
+}
+:root[data-motion="reduced"] .nv-site *,
+:root[data-motion="reduced"] .nv-site *::before,
+:root[data-motion="reduced"] .nv-site *::after {
+  animation-duration: 0.01ms !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+:root[data-motion="reduced"] .nv-ticker-track,
+:root[data-motion="reduced"] .nv-stamp svg {
+  animation: none !important;
+}
+
+/* Curated packages */
+.nv-packages {
+  background: #f3f0e7;
+}
+.nv-package-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.nv-package {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(24px, 3.5vw, 47px);
+  background: #e4e8dc;
+  transition:
+    background 0.3s,
+    transform 0.3s;
+}
+.nv-package:nth-child(2) {
+  background: #d8dfd2;
+}
+.nv-package:nth-child(3) {
+  background: #e9e2d5;
+}
+.nv-package:hover {
+  transform: translateY(-8px);
+}
+.nv-package-number {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  font:
+    400 47px/1 "Cormorant Garamond",
+    serif;
+}
+.nv-package-number span {
+  font:
+    600 9px "DM Sans",
+    sans-serif;
+  letter-spacing: 0.15em;
+}
+.nv-package h3 {
+  margin-top: 62px;
+  font:
+    400 clamp(34px, 3.5vw, 56px)/1 "Cormorant Garamond",
+    serif;
+}
+.nv-package > p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #657366;
+  margin-top: 16px;
+}
+.nv-package ul {
+  list-style: none;
+  padding: 22px 0;
+  margin: auto 0 0;
+}
+.nv-package li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 11px;
+  font-size: 11px;
+}
+.nv-package-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 15px;
+  border-top: 1px solid #a9b4a9;
+  padding-top: 22px;
+}
+.nv-package-bottom > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.nv-package-bottom span {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+.nv-package-bottom strong {
+  font:
+    400 45px/1 "Cormorant Garamond",
+    serif;
+}
+.nv-package-bottom button {
+  border: 1px solid #8ba18d;
+  border-radius: 50%;
+  background: none;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s;
+}
+.nv-package-bottom button:hover {
+  background: #f6f4ed;
+}
+
+/* People intro */
+.nv-people {
+  background: #e3e6dc;
+}
+.nv-people-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(50px, 10vw, 150px);
+  align-items: center;
+}
+.nv-people-visual {
+  min-height: 590px;
+  overflow: hidden;
+}
+.nv-people-visual img {
+  height: 590px;
+  object-fit: cover;
+}
+.nv-people-copy .nv-display {
+  margin: 27px 0;
+}
+.nv-people-copy > p {
+  max-width: 480px;
+  font-size: 14px;
+  line-height: 1.95;
+  color: #637064;
+}
+.nv-people-values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 35px 0 40px;
+}
+.nv-people-values span {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 11px 13px;
+  border: 1px solid #b2beaf;
+}
+
+/* Editorial notes */
+.nv-journal {
+  background: #f6f4ed;
+}
+.nv-journal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  border-top: 1px solid #b9bfb4;
+}
+.nv-journal-item {
+  padding: 34px 0 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+}
+.nv-journal-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  color: #657568;
+}
+.nv-journal-item h3 {
+  font:
+    400 clamp(40px, 4vw, 64px)/0.98 "Cormorant Garamond",
+    serif;
+  margin: 37px 0 18px;
+}
+.nv-journal-item > p {
+  font-size: 12px;
+  line-height: 1.85;
+  color: #737d72;
+}
+.nv-journal-item details {
+  border-top: 1px solid #bdc2b9;
+  margin-top: auto;
+  padding-top: 17px;
+}
+.nv-journal-item summary {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.nv-journal-item summary::-webkit-details-marker {
+  display: none;
+}
+.nv-journal-item details[open] summary svg {
+  transform: rotate(45deg);
+}
+.nv-journal-item details > p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #657568;
+  padding: 16px 0 0;
+}
+@media (max-width: 1000px) {
+  .nv-package-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .nv-people-layout {
+    gap: 50px;
+  }
+}
+@media (max-width: 700px) {
+  .nv-package-grid,
+  .nv-people-layout,
+  .nv-journal-grid {
+    grid-template-columns: 1fr;
+  }
+  .nv-package {
+    min-height: 450px;
+  }
+  .nv-people-visual,
+  .nv-people-visual img {
+    height: 390px;
+    min-height: 390px;
+  }
+  .nv-journal-item {
+    min-height: 280px;
+  }
+}
+
+/* Motion v1.1 visual upgrade — content remains readable without GSAP */
+.nv-hero {
+  isolation: isolate;
+  background: radial-gradient(ellipse at 70% 40%, #466a56 0%, #172f24 75%);
+}
+.nv-hero-orbit {
+  position: absolute;
+  border: 1px solid rgba(240, 233, 211, 0.37);
+  border-radius: 50%;
+  width: min(68vw, 920px);
+  aspect-ratio: 1;
+  left: 65%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+  animation: nv-orbit 34s linear infinite;
+}
+.nv-hero-orbit::before {
+  content: "✳";
+  font:
+    38px Georgia,
+    serif;
+  color: #e4d7bd;
+  position: absolute;
+  left: 9%;
+  top: 13%;
+  filter: drop-shadow(0 0 20px #edd5a3aa);
+}
+.nv-hero-orbit--secondary {
+  width: min(53vw, 710px);
+  left: 66%;
+  top: 48%;
+  border-color: rgba(240, 233, 211, 0.18);
+  animation-direction: reverse;
+  animation-duration: 47s;
+}
+.nv-hero-orbit--secondary::before {
+  font-size: 22px;
+  left: 86%;
+  top: 83%;
+}
+@keyframes nv-orbit {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+.nv-hero-photo {
+  opacity: 0.95;
+}
+.nv-ticker {
+  background: #2e4939;
+  color: #f6f1e5;
+  border-color: #486250;
+}
+.nv-ticker-track b {
+  color: #bdcca9;
+}
+.nv-ticker-track > span {
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+.nv-treatment-card {
+  transform-origin: center bottom;
+}
+@media (max-width: 880px) {
+  .nv-hero-orbit {
+    left: 80%;
+    width: 110vw;
+  }
+  .nv-hero-orbit--secondary {
+    width: 85vw;
+    left: 80%;
+  }
+}
+:root[data-motion="reduced"] .nv-hero-orbit {
+  animation: none !important;
+}
+:root[data-motion="reduced"] .nv-ticker-track {
+  animation: none !important;
+}
+
+/* High-quality fallback surfaces when demo image URLs are unavailable */
+.nv-story-visual,
+.nv-treatment-image,
+.nv-space-large,
+.nv-ritual-image,
+.nv-people-visual {
+  background: linear-gradient(135deg, #b2bba7, #697d6d 58%, #284538);
+}
+.nv-manifesto,
+.nv-closing {
+  background-color: #183a2b;
+}
