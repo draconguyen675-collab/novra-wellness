@@ -2,6 +2,8 @@
 
 Website spa và wellness gồm 25 màn hình, dùng React, TypeScript, Vite và GSAP. Dự án được tổ chức theo từng tính năng; mở `/screens` để xem danh sách đầy đủ, `/motion-lab` để thử hiệu ứng chuyển động.
 
+Demo trực tuyến: [novra-spa.netlify.app](https://novra-spa.netlify.app).
+
 ## Chạy dự án
 
 Dùng Node.js 22.12 trở lên. Tại thư mục chứa `package.json`:
